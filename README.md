@@ -94,4 +94,6 @@ python3 avx512/tune/tune.py rns_bench_out.json # Paste output to avx512/include/
 
 We would like to thank Simon Langowski for helpful discussions around hardware acceleration using his algorithm and implementation, and anonymous reviewers as well as the shepherd for their valuable comments.
 
-Some files in `avx512/include` are adapted from [an open-source implementation](https://github.com/SimonLangowski/RNSMont) of the paper ["Efficient Modular Multiplication Using Vector Instructions on Commodity Hardware"](https://eprint.iacr.org/2025/1068.pdf) by Simon Langowski and Srinivas Devadas. Our source code contains a copy of [JSON for Modern C++](https://github.com/nlohmann/json) by Niels Lohmann in `{flint,avx512}/include/nlohmann`.
+Some files in `avx512/include` are adapted from [an open-source implementation](https://github.com/SimonLangowski/RNSMont) of the paper ["Efficient Modular Multiplication Using Vector Instructions on Commodity Hardware"](https://eprint.iacr.org/2025/1068.pdf) by Simon Langowski and Srinivas Devadas. The folders `{flint,avx512}/include/nlohmann` contain copies of the single-header version of the library [JSON for Modern C++](https://github.com/nlohmann/json) by Niels Lohmann in `{flint,avx512}/include/nlohmann`.
+
+This material is based upon work supported by the National Science Foundation under Award No. 2330065. Any opinions, findings and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
