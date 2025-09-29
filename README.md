@@ -1,6 +1,6 @@
 # Concretely-Efficient Multi-Key Homomorphic Secret Sharing and Applications
 
-This is the code associated with the paper "Concretely-Efficient Multi-Key Homomorphic Secret Sharing and Applications", to appear at IEEE S&P 2026.
+This is the code associated with the paper "Concretely-Efficient Multi-Key Homomorphic Secret Sharing and Applications", by Kaiwen (Kevin) He, Sacha Servan-Schreiber, Geoffroy Couteau, and Srinivas Devadas, to appear at IEEE S&P 2026.
 
 Required:
 
@@ -12,7 +12,7 @@ Organization:
 
 - `flint/`: A version that uses FLINT for modular exponentiations.
   - Tested on an Ubuntu 22.04 machine on a AMD Ryzen 7 7735U processor equipped with 32 GB of memory (called _laptop_ in the paper).
-- `avx512/`: A version that uses Langowski and Devadas for modular exponentiations, which _requires_ a CPU with support of the AVX512-IFMA instruction set.
+- `avx512/`: A version that uses [Langowski and Devadas](https://eprint.iacr.org/2025/1068.pdf) for modular exponentiations, which _requires_ a CPU with support of the AVX512-IFMA instruction set.
   - Tested on an AWS bare metal instance of type `c7i.metal-24xl`, an x86_64 machine running Amazon Linux 2023 with support for the AVX512-IFMA instruction set.
 
 ## Build instructions
@@ -89,3 +89,9 @@ python3 flint/tune/tune.py # Paste output to flint/include/fixed_base_exp.hh
 python3 avx512/tune/tune.py flint_bench_out.json # Paste output to avx512/include/fixed_base_exp.hh
 python3 avx512/tune/tune.py rns_bench_out.json # Paste output to avx512/include/rns_fbe.hh
 ```
+
+## Acknowledgments
+
+We would like to thank Simon Langowski for helpful discussions around hardware acceleration using his algorithm and implementation, and anonymous reviewers as well as the shepherd for their valuable comments.
+
+Some files in `avx512/include` are adapted from [an open-source implementation](https://github.com/SimonLangowski/RNSMont) of the paper ["Efficient Modular Multiplication Using Vector Instructions on Commodity Hardware"](https://eprint.iacr.org/2025/1068.pdf) by Simon Langowski and Srinivas Devadas. Our source code contains a copy of [JSON for Modern C++](https://github.com/nlohmann/json) by Niels Lohmann in `{flint,avx512}/include/nlohmann`.
