@@ -1,0 +1,31 @@
+def __simple_straus(exponents: list[int], lg_B: int, k: int, basis: list[SimulatedVectorElement], identity: SimulatedVectorElement) -> SimulatedVectorElement:
+    # Precompute all p 2^k-size windows
+    precomputed_caches = []
+    for base in basis:
+        current = base
+        precomputed_cache = [base]
+        for i in range(2, 2 ** k):
+            if i % 2 == 0:
+                current = precomputed_cache[i // 2 - 1] * precomputed_cache[i // 2 - 1]
+            else:
+                current = current * base
+            # assert current.exponent == i, "Exponentiation error in Brauer's algorithm"
+            precomputed_cache.append(current)
+        precomputed_caches.append(precomputed_cache)
+        del precomputed_cache
+    # Now exponentiate
+    bits_lsb_first = [[int(x) for x in bin(exponent)[2:].zfill(lg_B)][::-1] for exponent in exponents]
+    current = identity
+    for window in reversed(range(0, lg_B, k)):
+        for i in range(len(basis)):
+            bits = bits_lsb_first[i][window:window + k]
+            # Convert bits to integer
+            window_value = sum(bit * (2 ** i) for i, bit in enumerate(bits))
+            # print(window_value, bits)
+            if window_value != 0:
+                current = current * precomputed_caches[i][window_value - 1]
+        # Keep squaring until we reach the next window
+        if window != 0:
+            for _ in range(k):
+                current = current * current
+    return current

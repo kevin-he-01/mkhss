@@ -1,0 +1,74 @@
+# ===== Optimized MKHSS Parameters =====
+# short_exponent_assumption: true
+# stat_sec_param: 128
+# sec_param: 128
+# n_width: 3072
+# log2_b: 1
+# w: 1
+# ---- Dependent variables
+# prf_key_length: 16
+# secret_bits: 256
+# bprime_bits: 129
+# nim_product_bits: 640
+# exponent_bits: 899
+# ======================================
+
+# ===== ANIKE Parameters =====
+# stat_sec_param: 128
+# sec_param: 128
+# n_width: 3072
+# D (dimensionality of coordinate): 2
+# L (number of bits to represent a coordinate): 32
+# ============================
+
+{
+    "D": 2,
+    "L": 32,
+    "anike_app": "geolocation",
+    "mkhss_scheme": "optimized",
+    "profile": {
+        "keyderA": {
+            "key_derivation_time": 0.000145168,
+            "memory_management": 0.001172563,
+            "num_rms_muls": 382,
+            "rms_init_time": 0.004540348,
+            "rms_mult": 1.004568692,
+            "rms_precompute": 0.297017922,
+            "sync_shares_profile": {
+                "sync_other_time": 0.229276476,
+                "sync_self_explinencs": 0.016426001,
+                "sync_self_precompute": 0.009210015
+            }
+        },
+        "keyderA_time": 1.562607389,
+        "keyderB": {
+            "key_derivation_time": 0.000107058,
+            "memory_management": 0.001335685,
+            "num_rms_muls": 382,
+            "rms_init_time": 0.003138772,
+            "rms_mult": 1.004555066,
+            "rms_precompute": 0.303135178,
+            "sync_shares_profile": {
+                "sync_other_time": 0.11806003,
+                "sync_self_explinencs": 0.03455752,
+                "sync_self_precompute": 0.008408026
+            }
+        },
+        "keyderB_time": 1.473484739,
+        "keygenA": {
+            "keygen_time": 0.007837442,
+            "nike_time": 0.001135785,
+            "precompute_time": 0.018545583,
+            "share_time": 0.036517756
+        },
+        "keygenA_time": 0.064037399,
+        "keygenB": {
+            "keygen_time": 0.007063905,
+            "nike_time": 3.2871e-05,
+            "precompute_time": 0.017993534,
+            "share_time": 0.066731029
+        },
+        "keygenB_time": 0.09182228,
+        "setup_time": 0.030778716
+    }
+}

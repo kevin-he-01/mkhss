@@ -1,0 +1,142 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from gmpy2 import *\n",
+    "import random"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "GMP version: GMP 6.2.1\n"
+     ]
+    }
+   ],
+   "source": [
+    "print('GMP version:', mp_version())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "p = mpz(2294317681846666929032827582915871147244238987997154260752547927761680407421350229668773012083293163939930095650000966848974846426935880157396423658936168303309628291888369175257564190205921538136908065555094603890577067744062235964934772618271361628841709528345147510719656157699030950075087622569709218424737738471399638675144865007958387674395112624472783726720735207890567612000139879052278793348059850324662301473079411528931593319130299609354852366107441239)\n",
+    "q = mpz(1802494200593124212877152220232057969820149101914917780567591041508929337113672371831686701300162645584692094587236891084394805966156657242794183368629797943879758663215081196373567865079353053014764237157020467354213814092738224751701006694341238296353856053396495458533514247995304409039019527215364796433416900272253602642367831373391296602437921809825075367037815161801942356870512197084830383932961071437649554131171040771475751447685105744841506905509803343)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "N = p * q"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def benchmark_exp(n, w):\n",
+    "    print(f\"w = {w}\")\n",
+    "    n_w_1 = n ** (w + 1)\n",
+    "    base = mpz(random.randint(1,n_w_1))\n",
+    "    exp = mpz(random.randint(1,n ** w))\n",
+    "    %timeit pow(base, exp, n_w_1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "w = 1\n",
+      "19.1 ms ± 1.16 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)\n"
+     ]
+    }
+   ],
+   "source": [
+    "benchmark_exp(N, 1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "w = 3\n",
+      "169 ms ± 787 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)\n"
+     ]
+    }
+   ],
+   "source": [
+    "benchmark_exp(N, 3)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Each RMS multiplication in our construction requires two exponentiations:\n",
+    "one exponentiation in Z∗\n",
+    "N 4 and one in Z∗\n",
+    "N 2 , which require roughly 60 milliseconds and 15 milliseconds\n",
+    "on high-end hardware, respectively, when using a 3072-bit modulus N . Therefore, we can expect each\n",
+    "multiplication to take between 75 and 100 milliseconds"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "System uses old GMP. Might want to try the latest version to see if there are improvements (without breaking the system...):\n",
+    "Package: libgmp-dev\n",
+    "Version: 2:6.2.1+dfsg-3ubuntu1"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.12"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}

@@ -1,0 +1,61 @@
+File: eff_large_wordlist.txt
+First and last 10 words:
+['abacus', 'abdomen', 'abdominal', 'abide', 'abiding', 'ability', 'ablaze', 'able', 'abnormal', 'abrasion']
+['zips', 'zit', 'zodiac', 'zombie', 'zone', 'zoning', 'zookeeper', 'zoologist', 'zoology', 'zoom']
+
+Statistics:
+  Total words: 7776
+  Max length: 9
+  Min length: 3
+  Avg length: 6.99
+  Entropy: 12.92 bits
+  Charset size (including NUL): 28
+  Number of bits to represent charset: 5 bits
+
+First and last 10 words (null-padded):
+['abacus\x00\x00\x00', 'abdomen\x00\x00', 'abdominal', 'abide\x00\x00\x00\x00', 'abiding\x00\x00', 'ability\x00\x00', 'ablaze\x00\x00\x00', 'able\x00\x00\x00\x00\x00', 'abnormal\x00', 'abrasion\x00']
+['zips\x00\x00\x00\x00\x00', 'zit\x00\x00\x00\x00\x00\x00', 'zodiac\x00\x00\x00', 'zombie\x00\x00\x00', 'zone\x00\x00\x00\x00\x00', 'zoning\x00\x00\x00', 'zookeeper', 'zoologist', 'zoology\x00\x00', 'zoom\x00\x00\x00\x00\x00']
+
+Neighborhood size analysis: threshold = 2
+  Neighborhood size for "cofounder": 1
+    Remaining entropy: 12.92 bits
+  Neighborhood size for "glacial": 2
+    Remaining entropy: 11.92 bits
+  Neighborhood size for "uninstall": 1
+    Remaining entropy: 12.92 bits
+  Neighborhood size for "bagel": 13
+    Remaining entropy: 9.22 bits
+  Neighborhood size for "kinship": 1
+    Remaining entropy: 12.92 bits
+  Neighborhood size for "wasp": 24
+    Remaining entropy: 8.34 bits
+  Neighborhood size for "dinginess": 3
+    Remaining entropy: 11.34 bits
+  Neighborhood size for "couch": 12
+    Remaining entropy: 9.34 bits
+  Neighborhood size for "amplify": 1
+    Remaining entropy: 12.92 bits
+  Neighborhood size for "dallying": 1
+    Remaining entropy: 12.92 bits
+
+Average remaining entropy: 11.22 bits
+0th percentile of remaining entropy: 7.22 bits
+5th percentile of remaining entropy: 8.47 bits
+10th percentile of remaining entropy: 9.02 bits
+15th percentile of remaining entropy: 9.47 bits
+20th percentile of remaining entropy: 9.75 bits
+25th percentile of remaining entropy: 10.12 bits
+30th percentile of remaining entropy: 10.34 bits
+35th percentile of remaining entropy: 10.60 bits
+40th percentile of remaining entropy: 10.92 bits
+45th percentile of remaining entropy: 11.34 bits
+50th percentile of remaining entropy: 11.34 bits
+55th percentile of remaining entropy: 11.92 bits
+60th percentile of remaining entropy: 11.92 bits
+65th percentile of remaining entropy: 11.92 bits
+70th percentile of remaining entropy: 11.92 bits
+75th percentile of remaining entropy: 12.92 bits
+80th percentile of remaining entropy: 12.92 bits
+85th percentile of remaining entropy: 12.92 bits
+90th percentile of remaining entropy: 12.92 bits
+95th percentile of remaining entropy: 12.92 bits

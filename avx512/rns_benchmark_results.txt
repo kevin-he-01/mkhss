@@ -1,0 +1,114 @@
+./build/benchmark --benchmark_filter=rns --benchmark_repetitions=10
+# ===== Optimized MKHSS Parameters =====
+# short_exponent_assumption: true
+# stat_sec_param: 128
+# sec_param: 128
+# n_width: 3072
+# log2_b: 1
+# w: 1
+# ---- Dependent variables
+# prf_key_length: 16
+# secret_bits: 256
+# bprime_bits: 129
+# nim_product_bits: 640
+# exponent_bits: 899
+# ======================================
+
+
+2025-08-10T00:26:33+00:00
+Running ./build/benchmark
+Run on (2 X 2400 MHz CPU s)
+CPU Caches:
+  L1 Data 48 KiB (x1)
+  L1 Instruction 32 KiB (x1)
+  L2 Unified 2048 KiB (x1)
+  L3 Unified 107520 KiB (x1)
+Load Average: 1.13, 0.61, 0.36
+***WARNING*** ASLR is enabled, the results may have unreproducible noise in them.
+------------------------------------------------------------------
+Benchmark                        Time             CPU   Iterations
+------------------------------------------------------------------
+rns::ToMont                 127855 ns       127833 ns         5512
+rns::ToMont                 127433 ns       127320 ns         5512
+rns::ToMont                 127241 ns       127237 ns         5512
+rns::ToMont                 128100 ns       128096 ns         5512
+rns::ToMont                 128377 ns       127604 ns         5512
+rns::ToMont                 128755 ns       128753 ns         5512
+rns::ToMont                 127276 ns       127275 ns         5512
+rns::ToMont                 128170 ns       128168 ns         5512
+rns::ToMont                 126172 ns       126170 ns         5512
+rns::ToMont                 127933 ns       127930 ns         5512
+rns::ToMont_mean            127731 ns       127639 ns           10
+rns::ToMont_median          127894 ns       127719 ns           10
+rns::ToMont_stddev             732 ns          700 ns           10
+rns::ToMont_cv                0.57 %          0.55 %            10
+rns::ToMontAVX                3407 ns         3406 ns       205882
+rns::ToMontAVX                3432 ns         3432 ns       205882
+rns::ToMontAVX                3428 ns         3425 ns       205882
+rns::ToMontAVX                3461 ns         3461 ns       205882
+rns::ToMontAVX                3423 ns         3423 ns       205882
+rns::ToMontAVX                3435 ns         3435 ns       205882
+rns::ToMontAVX                3389 ns         3389 ns       205882
+rns::ToMontAVX                3461 ns         3461 ns       205882
+rns::ToMontAVX                3367 ns         3367 ns       205882
+rns::ToMontAVX                3450 ns         3450 ns       205882
+rns::ToMontAVX_mean           3425 ns         3425 ns           10
+rns::ToMontAVX_median         3430 ns         3429 ns           10
+rns::ToMontAVX_stddev         30.6 ns         30.5 ns           10
+rns::ToMontAVX_cv             0.89 %          0.89 %            10
+rns::MulMont                  3328 ns         3328 ns       211423
+rns::MulMont                  3291 ns         3291 ns       211423
+rns::MulMont                  3301 ns         3300 ns       211423
+rns::MulMont                  3282 ns         3282 ns       211423
+rns::MulMont                  3260 ns         3260 ns       211423
+rns::MulMont                  3274 ns         3274 ns       211423
+rns::MulMont                  3271 ns         3271 ns       211423
+rns::MulMont                  3325 ns         3324 ns       211423
+rns::MulMont                  3286 ns         3282 ns       211423
+rns::MulMont                  3291 ns         3289 ns       211423
+rns::MulMont_mean             3291 ns         3290 ns           10
+rns::MulMont_median           3288 ns         3286 ns           10
+rns::MulMont_stddev           22.0 ns         22.1 ns           10
+rns::MulMont_cv               0.67 %          0.67 %            10
+rns::MulMontSeq               3284 ns         3284 ns       218484
+rns::MulMontSeq               3265 ns         3265 ns       218484
+rns::MulMontSeq               3253 ns         3253 ns       218484
+rns::MulMontSeq               3293 ns         3292 ns       218484
+rns::MulMontSeq               3273 ns         3272 ns       218484
+rns::MulMontSeq               3277 ns         3276 ns       218484
+rns::MulMontSeq               3280 ns         3280 ns       218484
+rns::MulMontSeq               3305 ns         3304 ns       218484
+rns::MulMontSeq               3312 ns         3311 ns       218484
+rns::MulMontSeq               3299 ns         3299 ns       218484
+rns::MulMontSeq_mean          3284 ns         3284 ns           10
+rns::MulMontSeq_median        3282 ns         3282 ns           10
+rns::MulMontSeq_stddev        18.2 ns         18.2 ns           10
+rns::MulMontSeq_cv            0.56 %          0.55 %            10
+rns::FromMont                23350 ns        23349 ns        29718
+rns::FromMont                23601 ns        23600 ns        29718
+rns::FromMont                23246 ns        23244 ns        29718
+rns::FromMont                23521 ns        23520 ns        29718
+rns::FromMont                22915 ns        22914 ns        29718
+rns::FromMont                23125 ns        23124 ns        29718
+rns::FromMont                22919 ns        22919 ns        29718
+rns::FromMont                23226 ns        23225 ns        29718
+rns::FromMont                23341 ns        23341 ns        29718
+rns::FromMont                23339 ns        23336 ns        29718
+rns::FromMont_mean           23258 ns        23257 ns           10
+rns::FromMont_median         23292 ns        23290 ns           10
+rns::FromMont_stddev           226 ns          226 ns           10
+rns::FromMont_cv              0.97 %          0.97 %            10
+rns::FromMontAVX              2598 ns         2598 ns       262261
+rns::FromMontAVX              2647 ns         2647 ns       262261
+rns::FromMontAVX              2664 ns         2663 ns       262261
+rns::FromMontAVX              2611 ns         2611 ns       262261
+rns::FromMontAVX              2634 ns         2634 ns       262261
+rns::FromMontAVX              2622 ns         2622 ns       262261
+rns::FromMontAVX              2625 ns         2624 ns       262261
+rns::FromMontAVX              2642 ns         2642 ns       262261
+rns::FromMontAVX              2612 ns         2610 ns       262261
+rns::FromMontAVX              2621 ns         2621 ns       262261
+rns::FromMontAVX_mean         2628 ns         2627 ns           10
+rns::FromMontAVX_median       2623 ns         2623 ns           10
+rns::FromMontAVX_stddev       19.4 ns         19.5 ns           10
+rns::FromMontAVX_cv           0.74 %          0.74 %            10

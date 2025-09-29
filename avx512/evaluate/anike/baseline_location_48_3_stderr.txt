@@ -1,0 +1,33 @@
+setup... done
+# ===== Baseline MKHSS Parameters =====
+# short_exponent_assumption: true
+# stat_sec_param: 128
+# sec_param: 128
+# n_width: 3072
+# log2_b: 1
+# w: 3
+# ----- Dependent variables
+# prf_key_length: 16
+# secret_bits: 256
+# bprime_bits: 3072
+# exponent_bits: 6785
+# ===== End Parameters =====
+# ===== ANIKE Parameters =====
+# stat_sec_param: 128
+# sec_param: 128
+# n_width: 3072
+# D (dimensionality of coordinate): 3
+# L (number of bits to represent a coordinate): 48
+# ============================
+
+Coordinates for Alice: 143043615168826 52810145861581 116957493441291 
+Coordinates for Bob: 90072344566430 129688958355784 85099526828842 
+Distance: 70740615042979 80778125566214 63288254326484 
+attr_key_gen(sigma = A)... 0.551368 seconds
+attr_key_gen(sigma = B)... 0.988152 seconds
+attr_key_der(sigma = A)... 138.851 seconds
+attr_key_der(sigma = B)... 130.717 seconds
+
+Key A: 6b69b1586ba3ab5da91485b9996b3f3a
+Key B: 6b69b1586ba3ab5da91485b9996b3f3a
+Keys are equal

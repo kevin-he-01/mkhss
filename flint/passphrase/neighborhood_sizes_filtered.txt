@@ -1,0 +1,53 @@
+File: filtered_eff_large_wordlist.txt
+First and last 10 words:
+['abacus', 'abdomen', 'abdominal', 'abiding', 'ability', 'ablaze', 'able', 'abnormal', 'abrasion', 'abrasive']
+['zestfully', 'zigzagged', 'zipfile', 'zipping', 'zippy', 'zodiac', 'zombie', 'zookeeper', 'zoologist', 'zoology']
+
+Statistics:
+  Total words: 6490
+  Max length: 9
+  Min length: 3
+  Avg length: 7.41
+  Entropy: 12.66 bits
+  Charset size (including NUL): 28
+  Number of bits to represent charset: 5 bits
+
+Charset:  '\x00-abcdefghijklmnopqrstuvwxyz'
+First and last 10 words (null-padded):
+['abacus\x00\x00\x00', 'abdomen\x00\x00', 'abdominal', 'abiding\x00\x00', 'ability\x00\x00', 'ablaze\x00\x00\x00', 'able\x00\x00\x00\x00\x00', 'abnormal\x00', 'abrasion\x00', 'abrasive\x00']
+['zestfully', 'zigzagged', 'zipfile\x00\x00', 'zipping\x00\x00', 'zippy\x00\x00\x00\x00', 'zodiac\x00\x00\x00', 'zombie\x00\x00\x00', 'zookeeper', 'zoologist', 'zoology\x00\x00']
+
+Neighborhood size analysis: threshold = 2
+  Neighborhood size for "slacking": 6
+    Remaining entropy: 10.08 bits
+  Neighborhood size for "agreed": 1
+    Remaining entropy: 12.66 bits
+  Neighborhood size for "army": 4
+    Remaining entropy: 10.66 bits
+  Neighborhood size for "askew": 3
+    Remaining entropy: 11.08 bits
+  Neighborhood size for "worsening": 1
+    Remaining entropy: 12.66 bits
+  Neighborhood size for "overreact": 2
+    Remaining entropy: 11.66 bits
+  Neighborhood size for "uncivil": 1
+    Remaining entropy: 12.66 bits
+  Neighborhood size for "chivalry": 1
+    Remaining entropy: 12.66 bits
+  Neighborhood size for "outscore": 1
+    Remaining entropy: 12.66 bits
+  Neighborhood size for "entrench": 1
+    Remaining entropy: 12.66 bits
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6490/6490 [00:21<00:00, 296.95it/s]
+Neighborhood size distribution:
+  Neighborhood size 1: 2290 words (35.29%)
+  Neighborhood size 2: 1602 words (24.68%)
+  Neighborhood size 3: 1000 words (15.41%)
+  Neighborhood size 4: 682 words (10.51%)
+  Neighborhood size 5: 437 words (6.73%)
+  Neighborhood size 6: 246 words (3.79%)
+  Neighborhood size 7: 143 words (2.20%)
+  Neighborhood size 8: 66 words (1.02%)
+  Neighborhood size 9: 22 words (0.34%)
+  Neighborhood size 10: 2 words (0.03%)

@@ -1,0 +1,23 @@
+# started on Fri Jul 25 20:57:25 2025
+
+
+ Performance counter stats for './build/rns_fuzzy_pake 8 9 5 2 2 --alice-only':
+
+           5252.09 msec task-clock                       #    1.000 CPUs utilized          
+                15      context-switches                 #    2.856 /sec                   
+                 0      cpu-migrations                   #    0.000 /sec                   
+             42142      page-faults                      #    8.024 K/sec                  
+       18835363225      cycles                           #    3.586 GHz                    
+   <not supported>      stalled-cycles-frontend                                     
+       51172572192      instructions                     #    2.72  insn per cycle         
+        2095636817      branches                         #  399.010 M/sec                  
+          18530697      branch-misses                    #    0.88% of all branches        
+           3953869      cache-references                 #  752.819 K/sec                  
+           2855154      cache-misses                     #   72.212 % of all cache refs    
+
+       5.252622089 seconds time elapsed
+
+       5.132366000 seconds user
+       0.120055000 seconds sys
+
+

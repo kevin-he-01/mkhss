@@ -1,0 +1,23 @@
+# started on Fri Jul 25 20:57:14 2025
+
+
+ Performance counter stats for './build/fuzzy_pake 8 9 5 2 2 --alice-only':
+
+          10870.43 msec task-clock                       #    1.000 CPUs utilized          
+                26      context-switches                 #    2.392 /sec                   
+                 0      cpu-migrations                   #    0.000 /sec                   
+              4211      page-faults                      #  387.381 /sec                   
+       41274924015      cycles                           #    3.797 GHz                    
+   <not supported>      stalled-cycles-frontend                                     
+      139961283488      instructions                     #    3.39  insn per cycle         
+       10947181158      branches                         #    1.007 G/sec                  
+          51042397      branch-misses                    #    0.47% of all branches        
+           1022050      cache-references                 #   94.021 K/sec                  
+            349144      cache-misses                     #   34.161 % of all cache refs    
+
+      10.871127077 seconds time elapsed
+
+      10.820754000 seconds user
+       0.050003000 seconds sys
+
+

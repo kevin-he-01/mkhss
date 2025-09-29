@@ -1,0 +1,74 @@
+# ===== Optimized MKHSS Parameters =====
+# short_exponent_assumption: true
+# stat_sec_param: 128
+# sec_param: 128
+# n_width: 3072
+# log2_b: 1
+# w: 1
+# ---- Dependent variables
+# prf_key_length: 16
+# secret_bits: 256
+# bprime_bits: 129
+# nim_product_bits: 640
+# exponent_bits: 899
+# ======================================
+
+# ===== ANIKE Parameters =====
+# stat_sec_param: 128
+# sec_param: 128
+# n_width: 3072
+# D (dimensionality of coordinate): 4
+# L (number of bits to represent a coordinate): 64
+# ============================
+
+{
+    "D": 4,
+    "L": 64,
+    "anike_app": "geolocation",
+    "mkhss_scheme": "optimized",
+    "profile": {
+        "keyderA": {
+            "key_derivation_time": 0.000595869,
+            "memory_management": 0.005848727,
+            "num_rms_muls": 1532,
+            "rms_init_time": 0.004838191,
+            "rms_mult": 4.08172506,
+            "rms_precompute": 1.2227344269999998,
+            "sync_shares_profile": {
+                "sync_other_time": 0.951479166,
+                "sync_self_explinencs": 0.096402203,
+                "sync_self_precompute": 0.001154049
+            }
+        },
+        "keyderA_time": 6.365599023,
+        "keyderB": {
+            "key_derivation_time": 0.000129617,
+            "memory_management": 0.0068717380000000005,
+            "num_rms_muls": 1532,
+            "rms_init_time": 0.003380828,
+            "rms_mult": 3.995970453,
+            "rms_precompute": 1.194417934,
+            "sync_shares_profile": {
+                "sync_other_time": 0.484515595,
+                "sync_self_explinencs": 0.212636702,
+                "sync_self_precompute": 0.001160821
+            }
+        },
+        "keyderB_time": 5.899526778,
+        "keygenA": {
+            "keygen_time": 0.007202322,
+            "nike_time": 0.001259983,
+            "precompute_time": 0.002365503,
+            "share_time": 0.198913399
+        },
+        "keygenA_time": 0.209742858,
+        "keygenB": {
+            "keygen_time": 0.007117787,
+            "nike_time": 3.0345e-05,
+            "precompute_time": 0.002304511,
+            "share_time": 0.39264634
+        },
+        "keygenB_time": 0.402099625,
+        "setup_time": 0.029317904
+    }
+}

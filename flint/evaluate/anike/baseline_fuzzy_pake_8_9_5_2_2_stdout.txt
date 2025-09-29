@@ -1,0 +1,82 @@
+# ===== Baseline MKHSS Parameters =====
+# short_exponent_assumption: true
+# stat_sec_param: 128
+# sec_param: 128
+# n_width: 3072
+# log2_b: 1
+# w: 3
+# ----- Dependent variables
+# prf_key_length: 16
+# secret_bits: 256
+# bprime_bits: 3072
+# exponent_bits: 6785
+# ===== End Parameters =====
+# ===== ANIKE Parameters =====
+# stat_sec_param: 128
+# sec_param: 128
+# n_width: 3072
+# Q (character typo threshold): 2
+# T (word mismatch threshold): 2
+# W (# characters in a word): 9
+# b (character length in bits): 5
+# L (Number of words): 8
+# total_length (Total length of the binary string): 360
+# ============================
+
+{
+    "L": 8,
+    "Q": 2,
+    "T": 2,
+    "W": 9,
+    "anike_app": "fuzzy_pake",
+    "b": 5,
+    "mkhss_scheme": "baseline",
+    "profile": {
+        "alice_only": false,
+        "keyderA": {
+            "key_derivation_time": 6.8416e-05,
+            "memory_management": 0.13846578999999995,
+            "num_rms_muls": 3780,
+            "rms_init_time": 0.098397468,
+            "rms_isub": 0.100526303,
+            "rms_mult": 153.33365927900005,
+            "rms_precompute": 78.069088117,
+            "sync_shares_profile": {
+                "sync_other_time": 19.526591206,
+                "sync_self_explinencs": 0.198297978,
+                "sync_self_precompute": 0.073152536
+            }
+        },
+        "keyderA_time": 251.563888256,
+        "keyderB": {
+            "key_derivation_time": 6.4465e-05,
+            "memory_management": 0.14740576099999994,
+            "num_rms_muls": 3780,
+            "rms_init_time": 0.051583591,
+            "rms_isub": 0.099779081,
+            "rms_mult": 152.9486878599999,
+            "rms_precompute": 77.809879114,
+            "sync_shares_profile": {
+                "sync_other_time": 19.692367634,
+                "sync_self_explinencs": 0.197098423,
+                "sync_self_precompute": 0.06944749
+            }
+        },
+        "keyderB_time": 251.039726629,
+        "keygenA": {
+            "keygen_time": 0.10903882300000001,
+            "nike_time": 0.001163513,
+            "precompute_time": 0.154568967,
+            "share_time": 0.435483828
+        },
+        "keygenA_time": 0.700263445,
+        "keygenB": {
+            "keygen_time": 0.106884305,
+            "nike_time": 3.4424e-05,
+            "precompute_time": 0.146480236,
+            "share_time": 0.417622932
+        },
+        "keygenB_time": 0.671027838,
+        "setup_time": 0.270406682
+    }
+}

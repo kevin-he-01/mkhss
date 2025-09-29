@@ -1,0 +1,36 @@
+setup... done
+# ===== Baseline MKHSS Parameters =====
+# short_exponent_assumption: true
+# stat_sec_param: 128
+# sec_param: 128
+# n_width: 3072
+# log2_b: 1
+# w: 3
+# ----- Dependent variables
+# prf_key_length: 16
+# secret_bits: 256
+# bprime_bits: 3072
+# exponent_bits: 6785
+# ===== End Parameters =====
+# ===== ANIKE Parameters =====
+# stat_sec_param: 128
+# sec_param: 128
+# n_width: 3072
+# Q (character typo threshold): 2
+# T (word mismatch threshold): 2
+# W (# characters in a word): 9
+# b (character length in bits): 5
+# L (Number of words): 8
+# total_length (Total length of the binary string): 360
+# ============================
+
+x: | 11100 11000 01010 01010 10111 11000 00001 11001 11101 | 10010 11011 01111 11110 00111 11110 00001 11110 10111 | 11001 11101 01110 01100 11010 11101 11000 11000 00000 | 11111 11001 00100 11010 10000 11010 00000 11111 01000 | 11001 01000 11011 00011 00010 10100 11011 00010 01010 | 10001 11001 10010 01000 10000 11100 00110 11000 01101 | 10001 10001 01011 01101 00110 10111 10101 10010 01000 | 01000 01001 00010 01001 11100 00111 11111 11011 11110
+y: | 10111 10010 10110 01101 11010 00110 11110 11011 01111 | 10010 11101 01000 11101 00100 11001 11101 10010 00101 | 11101 10001 10000 01100 10000 00101 10010 00110 11100 | 10011 01000 10010 01010 10010 01000 11010 11001 01010 | 11000 10001 01101 01101 01000 00001 00110 10001 10001 | 00011 00111 10011 10100 00001 10101 01011 01100 11000 | 11110 00100 11100 01011 00011 00100 00010 11111 11011 | 10000 11111 11001 01110 00111 01101 10011 00001 00000
+attr_key_gen(sigma = A)... 0.700263 seconds
+attr_key_gen(sigma = B)... 0.671028 seconds
+attr_key_der(sigma = A)... 251.564 seconds, 3780 RMS multiplications
+attr_key_der(sigma = B)... 251.04 seconds, 3780 RMS multiplications
+
+Key A: dc4ffd2f14182ca317e0834ffd2b6e0e
+Key B: 4d96bf7d07fcb98ab134611ac143966c
+Keys are not equal

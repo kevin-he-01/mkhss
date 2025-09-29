@@ -1,0 +1,45 @@
+-------------------------------------------------------------------------
+Benchmark                               Time             CPU   Iterations
+-------------------------------------------------------------------------
+primegen::PrimeGen/3072        1460398173 ns   1459567499 ns            1
+primegen::PrimeGen/3072        4009936877 ns   4009639301 ns            1
+primegen::PrimeGen/3072        1821585161 ns   1821504622 ns            1
+primegen::PrimeGen/3072        6415409333 ns   6414947637 ns            1
+primegen::PrimeGen/3072        1120815699 ns   1120724912 ns            1
+primegen::PrimeGen/3072        1325489594 ns   1325485002 ns            1
+primegen::PrimeGen/3072        3336269331 ns   3336059999 ns            1
+primegen::PrimeGen/3072         271911459 ns    271911886 ns            1
+primegen::PrimeGen/3072        1282461604 ns   1282266693 ns            1
+primegen::PrimeGen/3072        4280200859 ns   4279955372 ns            1
+primegen::PrimeGen/3072_mean   2532447809 ns   2532206292 ns           10
+primegen::PrimeGen/3072_median 1640991667 ns   1640536061 ns           10
+primegen::PrimeGen/3072_stddev 1907228748 ns   1907141051 ns           10
+primegen::PrimeGen/3072_cv          75.31 %         75.32 %            10
+primegen::PrimeGen/3520        2654950677 ns   2652462530 ns            1
+primegen::PrimeGen/3520         255350636 ns    255344432 ns            1
+primegen::PrimeGen/3520        8342407233 ns   8341964896 ns            1
+primegen::PrimeGen/3520        5075804643 ns   5074852928 ns            1
+primegen::PrimeGen/3520        1614468790 ns   1614313834 ns            1
+primegen::PrimeGen/3520         826784909 ns    826773729 ns            1
+primegen::PrimeGen/3520        2229001603 ns   2228868622 ns            1
+primegen::PrimeGen/3520        4574257663 ns   4573930708 ns            1
+primegen::PrimeGen/3520        14200745911 ns   14199985081 ns            1
+primegen::PrimeGen/3520        4846674559 ns   4846033634 ns            1
+primegen::PrimeGen/3520_mean   4462044662 ns   4461453039 ns           10
+primegen::PrimeGen/3520_median 3614604170 ns   3613196619 ns           10
+primegen::PrimeGen/3520_stddev 4186073410 ns   4185948934 ns           10
+primegen::PrimeGen/3520_cv          93.82 %         93.82 %            10
+primegen::PrimeGen/3968        7746925892 ns   7745052954 ns            1
+primegen::PrimeGen/3968        2753024828 ns   2752836548 ns            1
+primegen::PrimeGen/3968        3922662390 ns   3922421641 ns            1
+primegen::PrimeGen/3968        3102283351 ns   3101425713 ns            1
+primegen::PrimeGen/3968        8177999384 ns   8177431689 ns            1
+primegen::PrimeGen/3968        5420652581 ns   5420236211 ns            1
+primegen::PrimeGen/3968        10423684412 ns   10423011077 ns            1
+primegen::PrimeGen/3968        8420854145 ns   8420283735 ns            1
+primegen::PrimeGen/3968        2112856918 ns   2112706629 ns            1
+primegen::PrimeGen/3968        13761071265 ns   13760282315 ns            1
+primegen::PrimeGen/3968_mean   6584201517 ns   6583568851 ns           10
+primegen::PrimeGen/3968_median 6583789237 ns   6582644583 ns           10
+primegen::PrimeGen/3968_stddev 3782220525 ns   3782018648 ns           10
+primegen::PrimeGen/3968_cv          57.44 %         57.45 %            10
