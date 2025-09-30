@@ -6,12 +6,12 @@ Required:
 
 - Libraries: FLINT, GMP (with C++ support), Google Benchmark Tool, OpenSSL
 - Build tool: CMake
-- Hardware: For `avx512/`, processor must be x86_64 and support AVX512-IFMA.
+- Hardware: For `avx512/`, the processor must be x86_64 and support AVX512-IFMA.
 
 Organization:
 
 - `flint/`: A version that uses FLINT for modular exponentiations.
-  - Tested on an Ubuntu 22.04 machine on a AMD Ryzen 7 7735U processor equipped with 32 GB of memory (called _laptop_ in the paper).
+  - Tested on an Ubuntu 22.04 machine on an AMD Ryzen 7 7735U processor equipped with 32 GB of memory (called _laptop_ in the paper).
 - `avx512/`: A version that uses [Langowski and Devadas](https://eprint.iacr.org/2025/1068.pdf) for modular exponentiations, which _requires_ a CPU with support of the AVX512-IFMA instruction set.
   - Tested on an AWS bare metal instance of type `c7i.metal-24xl`, an x86_64 machine running Amazon Linux 2023 with support for the AVX512-IFMA instruction set.
 
@@ -96,6 +96,6 @@ We would like to thank Simon Langowski for helpful discussions around hardware a
 
 Some files in `avx512/include` are adapted from [an open-source implementation](https://github.com/SimonLangowski/RNSMont) of the paper ["Efficient Modular Multiplication Using Vector Instructions on Commodity Hardware"](https://eprint.iacr.org/2025/1068.pdf) by Simon Langowski and Srinivas Devadas. The folders `{flint,avx512}/include/nlohmann` contain copies of the single-header version of the library [JSON for Modern C++](https://github.com/nlohmann/json) by Niels Lohmann in `{flint,avx512}/include/nlohmann`.
 
-Kaiwen He and Srinivas Devadas acknowledges the support of the National Science Foundation (NSF). This material is based upon work supported by the NSF under Award No. 2330065. Any opinions, findings and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+Kaiwen He and Srinivas Devadas acknowledge the support of the National Science Foundation (NSF). This material is based upon work supported by the NSF under Award No. 2330065. Any opinions, findings and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
 
 Geoffroy Couteau acknowledges the support of the French Agence Nationale de la Recherche (ANR), under the France 2030 ANR Project ANR-22-PECY003 SecureCompute. This work is supported by ERC grant OBELiSC (101115790).
